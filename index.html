@@ -70,7 +70,7 @@
         <path fill="#fff" d="M71.15,52.29v17.33c0,1.12-.92,2.03-2.04,2.04h-6.12c-1.12,0-2.03-.91-2.04-2.04v-14.27c0-2.81-2.28-5.1-5.1-5.1s-5.1,2.28-5.1,5.1v14.27c0,1.12-.91,2.03-2.04,2.04h-6.11c-1.12,0-2.04-.91-2.04-2.04v-26.5c0-1.12.92-2.03,2.04-2.04h6.12c1.12,0,2.03.91,2.04,2.04v1.31c2.22-2.79,5.61-4.4,9.17-4.36,5.63,0,11.21,4.08,11.21,12.23"/>
       </svg>
     </a>
-    <a href="#" aria-label="Contact"
+    <a id="contact-link" href="#" aria-label="Contact par e-mail"
        class="block w-[clamp(40px,3vw,54px)] h-[clamp(40px,3vw,54px)] transition-transform duration-200
               hover:-translate-x-1.5 max-[600px]:hover:translate-x-0 max-[600px]:hover:-translate-y-1.5">
       <svg viewBox="0 0 96.44 96.44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="block w-full h-full">
@@ -150,6 +150,18 @@
   }
   tick();
   setInterval(tick, 1000);
+
+  // Lien de contact anti-bots : l'adresse est encodée (base64) et le mailto
+  // n'est assemblé qu'au moment de l'interaction -> jamais en clair dans la source.
+  (function(){
+    const a = document.getElementById('contact-link');
+    if (!a) return;
+    const reveal = () => { a.href = 'mailto:' + atob('Y29udGFjdEBtaWthZG8ubHU='); };
+    a.addEventListener('mouseenter', reveal, { once: true });
+    a.addEventListener('focus', reveal, { once: true });
+    a.addEventListener('touchstart', reveal, { once: true, passive: true });
+    a.addEventListener('click', reveal); // garantit le href avant la navigation
+  })();
 </script>
 </body>
 </html>
