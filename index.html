@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIKADO — coming soon</title>
+<link rel="stylesheet" href="https://use.typekit.net/dyt7anz.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="font-sans bg-mikado-red text-black min-h-screen overflow-x-hidden antialiased">
+
+  <!-- Menu haut-gauche — vecteur exact extrait de la maquette (Icon Cadenas) -->
+  <button type="button" aria-label="Menu — accès privé"
+          class="group fixed z-30 bg-transparent border-0 p-0 cursor-pointer leading-[0]
+                 top-[clamp(26px,3.4vw,44px)] left-[clamp(26px,2.7vw,50px)]">
+    <svg viewBox="52 40 71 44" fill="#000" xmlns="http://www.w3.org/2000/svg"
+         class="block h-auto overflow-visible w-[clamp(56px,4vw,73px)]">
+      <!-- Barres : s'écartent de 4px au survol, retour ease .5s -->
+      <rect x="52" y="53" width="55" height="7"
+            class="[transform-box:fill-box] transition-transform duration-500 ease-[ease] motion-reduce:transition-none
+                   group-hover:-translate-y-1 group-focus-visible:-translate-y-1"/>
+      <rect x="52" y="65" width="55" height="7"/>
+      <rect x="52" y="77" width="55" height="7"
+            class="[transform-box:fill-box] transition-transform duration-500 ease-[ease] motion-reduce:transition-none
+                   group-hover:translate-y-1 group-focus-visible:translate-y-1"/>
+      <circle cx="107" cy="56" r="16" fill="#fff"/>
+      <!-- Cadenas : « non non » (bascule) au survol -->
+      <g class="[transform-box:fill-box] origin-center motion-reduce:animate-none
+                group-hover:animate-lockNo group-focus-visible:animate-lockNo">
+        <path fill="#121214" transform="translate(69.303 46.928)" d="M 33.70048522949219 8.927543640136719 L 32 8.927543640136719 L 32 5.781646728515625 C 32 2.593663692474365 34.5936393737793 0 37.78164672851562 0 C 40.96965789794922 0 43.56329345703125 2.593663692474365 43.56329345703125 5.781646728515625 L 43.56329345703125 8.87086009979248 L 41.86280822753906 8.87086009979248 L 41.86280822753906 5.781646728515625 C 41.86280822753906 3.53131103515625 40.03201293945312 1.700484395027161 37.78164672851562 1.700484395027161 C 35.53128433227539 1.700484395027161 33.70048522949219 3.53131103515625 33.70048522949219 5.781646728515625 L 33.70048522949219 8.927543640136719 Z"/>
+        <rect fill="#121214" x="100.396" y="53.928" width="13.207" height="11.143"/>
+        <path fill="#fff" transform="translate(-77.903 -290.237)" d="M 186.461669921875 348.4808349609375 C 186.461669921875 347.6629638671875 185.7987060546875 347 184.9808654785156 347 C 184.1629943847656 347 183.5 347.6629638671875 183.5 348.4808349609375 C 183.5 348.9288330078125 183.6991882324219 349.3300170898438 184.0135192871094 349.6015014648438 L 184.0135192871094 351.35888671875 C 184.0135192871094 351.8931274414062 184.4466247558594 352.3262329101562 184.9808654785156 352.3262329101562 C 185.5150756835938 352.3262329101562 185.9481811523438 351.8931274414062 185.9481811523438 351.35888671875 L 185.9481811523438 349.6015014648438 C 186.2625122070312 349.3300170898438 186.461669921875 348.9288330078125 186.461669921875 348.4808349609375 Z"/>
+      </g>
+    </svg>
+  </button>
+
+  <!-- Rail réseaux sociaux haut-droite — icônes SVG fournies -->
+  <nav aria-label="Réseaux sociaux"
+       class="fixed right-0 z-30 flex flex-col gap-[clamp(8px,.7vw,12px)] top-[clamp(28px,3.2vw,46px)]
+              max-[600px]:top-auto max-[600px]:bottom-0 max-[600px]:left-0 max-[600px]:flex-row max-[600px]:justify-center">
+    <a href="https://www.facebook.com/mikado.luxembourg" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+       class="block w-[clamp(40px,3vw,54px)] h-[clamp(40px,3vw,54px)] transition-transform duration-200
+              hover:-translate-x-1.5 max-[600px]:hover:translate-x-0 max-[600px]:hover:-translate-y-1.5">
+      <svg viewBox="0 0 96.44 96.44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="block w-full h-full">
+        <rect width="96.44" height="96.44" fill="#121214"/>
+        <path fill="#fff" d="M64.69,44.54l-.79,6.35c-.13,1.06-1.03,1.86-2.1,1.86h-10.29v26.55c-1.09.1-2.19.15-3.3.15-2.44,0-4.87-.24-7.26-.72v-25.98h-7.91c-.73,0-1.32-.59-1.32-1.32v-7.95c0-.73.59-1.32,1.32-1.33h7.91v-11.92c-.01-7.3,5.89-13.23,13.19-13.24h9.23c.73,0,1.32.6,1.32,1.33v7.95c0,.73-.59,1.32-1.32,1.32h-6.6c-2.92,0-5.28,2.38-5.27,5.3,0,0,0,0,0,.01v9.27h11.08c1.17,0,2.12.95,2.11,2.12,0,.09,0,.17-.02.26"/>
+      </svg>
+    </a>
+    <a href="https://www.instagram.com/mikado_luxembourg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+       class="block w-[clamp(40px,3vw,54px)] h-[clamp(40px,3vw,54px)] transition-transform duration-200
+              hover:-translate-x-1.5 max-[600px]:hover:translate-x-0 max-[600px]:hover:-translate-y-1.5">
+      <svg viewBox="0 0 96.44 96.44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="block w-full h-full">
+        <rect width="96.44" height="96.44" fill="#121214"/>
+        <path fill="#fff" d="M61.11,23.31h-25.77c-6.64,0-12.02,5.38-12.02,12.02v25.76c0,6.64,5.38,12.02,12.02,12.02h25.77c6.64,0,12.02-5.38,12.02-12.02v-25.76c0-6.64-5.38-12.02-12.02-12.02M68.83,60.24c0,4.74-3.85,8.59-8.59,8.59h-24.05c-4.74,0-8.59-3.85-8.59-8.59v-24.05c0-4.74,3.85-8.59,8.59-8.59h24.05c4.74,0,8.59,3.85,8.59,8.59v24.05Z"/>
+        <path fill="#fff" d="M48.24,35.34c-7.11,0-12.88,5.77-12.88,12.88s5.77,12.88,12.88,12.88,12.88-5.77,12.88-12.88h0c0-7.11-5.77-12.88-12.88-12.88M48.24,56.81c-4.74,0-8.59-3.85-8.59-8.59s3.85-8.59,8.59-8.59,8.59,3.85,8.59,8.59h0c0,4.74-3.85,8.58-8.59,8.59"/>
+        <path fill="#fff" d="M61.98,37.06c-1.42,0-2.58-1.15-2.58-2.58s1.15-2.58,2.58-2.58,2.58,1.15,2.58,2.58c0,1.42-1.15,2.57-2.58,2.58"/>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/company/mikdoluxembourg/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+       class="block w-[clamp(40px,3vw,54px)] h-[clamp(40px,3vw,54px)] transition-transform duration-200
+              hover:-translate-x-1.5 max-[600px]:hover:translate-x-0 max-[600px]:hover:-translate-y-1.5">
+      <svg viewBox="0 0 96.44 96.44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="block w-full h-full">
+        <rect width="96.44" height="96.44" fill="#121214"/>
+        <path fill="#fff" d="M37.52,30.89c0,3.38-2.74,6.12-6.11,6.12s-6.12-2.74-6.12-6.11,2.74-6.12,6.11-6.12h0c3.38,0,6.12,2.74,6.12,6.11"/>
+        <path fill="#fff" d="M36.04,71.66h-9.28c-.25,0-.46-.2-.46-.46v-29.67c0-.25.2-.46.46-.46h9.28c.25,0,.46.2.46.46v29.67c0,.25-.2.46-.46.46"/>
+        <path fill="#fff" d="M71.15,52.29v17.33c0,1.12-.92,2.03-2.04,2.04h-6.12c-1.12,0-2.03-.91-2.04-2.04v-14.27c0-2.81-2.28-5.1-5.1-5.1s-5.1,2.28-5.1,5.1v14.27c0,1.12-.91,2.03-2.04,2.04h-6.11c-1.12,0-2.04-.91-2.04-2.04v-26.5c0-1.12.92-2.03,2.04-2.04h6.12c1.12,0,2.03.91,2.04,2.04v1.31c2.22-2.79,5.61-4.4,9.17-4.36,5.63,0,11.21,4.08,11.21,12.23"/>
+      </svg>
+    </a>
+  </nav>
+
+  <!-- Scène centrale -->
+  <main class="min-h-screen flex flex-col items-center justify-center text-center
+               gap-[clamp(26px,3vw,44px)] py-[14vh] px-[clamp(20px,6vw,80px)]
+               max-[600px]:gap-6 max-[600px]:pt-[16vh] max-[600px]:pb-24">
+
+    <!-- Bloc logo -->
+    <div class="relative flex items-center justify-center bg-black w-[min(768px,72vw)] aspect-[768/240]" aria-label="MIKADO">
+      <svg viewBox="0 0 768 240" fill="#fff" role="img" aria-label="MIKADO" xmlns="http://www.w3.org/2000/svg"
+           class="absolute inset-0 w-full h-full block select-none">
+        <!-- Fragments retravaillés (docs/mikado-logo.svg) : pointes du M + bas du O -->
+        <polygon points="74.65 79.02 74.65 58.67 92.29 77.83 74.65 79.02"/>
+        <polygon points="169.95 74.27 184.32 58.67 184.32 73.55 169.95 74.27"/>
+        <path d="M609.69,162.01l-5.03,5.46s36.29,27.42,73.68-8.88-68.65,3.42-68.65,3.42Z"/>
+      </svg>
+
+      <!-- Petit clin d'œil pour qui retire la bande blanche via l'inspecteur ;-) -->
+      <p class="absolute inset-0 flex items-center justify-center text-center px-[7%] text-white
+                font-circe font-light not-italic tracking-[.02em] select-none pointer-events-none
+                text-[clamp(15px,2.3vw,32px)]">Il faudra attendre encore un peu ;-)</p>
+
+      <!-- Bande blanche diagonale — statique, déborde du cadre, ombre douce -->
+      <span class="absolute left-[-11%] top-[21%] w-[122%] h-[55.5%] bg-white origin-center
+                   -rotate-[4.5deg] shadow-[0_12px_26px_rgba(0,0,0,0.35)]"></span>
+    </div>
+
+    <!-- Tagline -->
+    <div class="font-circe font-light not-italic text-black tracking-[.04em] flex flex-wrap justify-center
+                text-[clamp(13px,1.15vw,20px)] gap-[clamp(8px,.9vw,16px)] max-w-[90vw]">
+      <span>advertising</span><span class="opacity-[.85]">|</span>
+      <span>design</span><span class="opacity-[.85]">|</span>
+      <span>online</span><span class="opacity-[.85]">|</span>
+      <span>audiovisual</span><span class="opacity-[.85]">|</span>
+      <span>strategy</span><span class="opacity-[.85]">|</span>
+      <span>media</span>
+    </div>
+
+    <!-- Compte à rebours -->
+    <div id="countdown"
+         class="font-circe font-bold not-italic text-black whitespace-nowrap leading-[.95] tracking-[.01em]
+                text-[clamp(58px,11vw,168px)] max-[600px]:text-[clamp(40px,13vw,60px)]">168:46:17:86</div>
+
+  </main>
+
+<script>
+  // Compte à rebours live (jours:heures:minutes:secondes)
+  // Terme : 15 juillet 2026 à 00h00, heure du Luxembourg (CEST, UTC+2).
+  const target = new Date('2026-07-15T00:00:00+02:00');
+
+  const el = document.getElementById('countdown');
+  const pad = n => String(n).padStart(2, '0');
+
+  function tick(){
+    let diff = Math.max(0, target - new Date());
+    const d = Math.floor(diff / 86400000); diff -= d * 86400000;
+    const h = Math.floor(diff / 3600000);  diff -= h * 3600000;
+    const m = Math.floor(diff / 60000);    diff -= m * 60000;
+    const s = Math.floor(diff / 1000);
+    const str = `${pad(d)}:${pad(h)}:${pad(m)}:${pad(s)}`;
+    // Chaque chiffre dans une boîte de largeur fixe -> l'affichage ne bouge plus
+    el.innerHTML = [...str].map(ch =>
+      ch === ':'
+        ? '<span class="inline-block w-[.30em] text-center">:</span>'
+        : `<span class="inline-block w-[.64em] text-center">${ch}</span>`
+    ).join('');
+  }
+  tick();
+  setInterval(tick, 1000);
+</script>
+</body>
+</html>
