@@ -6,6 +6,10 @@
 <title>MIKADO — coming soon</title>
 <link rel="stylesheet" href="https://use.typekit.net/dyt7anz.css">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body class="font-sans bg-mikado-red text-black min-h-screen overflow-x-hidden antialiased">
 
@@ -64,6 +68,14 @@
         <path fill="#fff" d="M37.52,30.89c0,3.38-2.74,6.12-6.11,6.12s-6.12-2.74-6.12-6.11,2.74-6.12,6.11-6.12h0c3.38,0,6.12,2.74,6.12,6.11"/>
         <path fill="#fff" d="M36.04,71.66h-9.28c-.25,0-.46-.2-.46-.46v-29.67c0-.25.2-.46.46-.46h9.28c.25,0,.46.2.46.46v29.67c0,.25-.2.46-.46.46"/>
         <path fill="#fff" d="M71.15,52.29v17.33c0,1.12-.92,2.03-2.04,2.04h-6.12c-1.12,0-2.03-.91-2.04-2.04v-14.27c0-2.81-2.28-5.1-5.1-5.1s-5.1,2.28-5.1,5.1v14.27c0,1.12-.91,2.03-2.04,2.04h-6.11c-1.12,0-2.04-.91-2.04-2.04v-26.5c0-1.12.92-2.03,2.04-2.04h6.12c1.12,0,2.03.91,2.04,2.04v1.31c2.22-2.79,5.61-4.4,9.17-4.36,5.63,0,11.21,4.08,11.21,12.23"/>
+      </svg>
+    </a>
+    <a href="#" aria-label="Contact"
+       class="block w-[clamp(40px,3vw,54px)] h-[clamp(40px,3vw,54px)] transition-transform duration-200
+              hover:-translate-x-1.5 max-[600px]:hover:translate-x-0 max-[600px]:hover:-translate-y-1.5">
+      <svg viewBox="0 0 96.44 96.44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="block w-full h-full">
+        <rect width="96.44" height="96.44" fill="#121214"/>
+        <path fill="#fff" d="M35.25,76.32c-.58,0-1.16-.16-1.66-.45-1.02-.59-1.64-1.68-1.64-2.85v-6.3h-5.93c-2.54-.01-4.6-2.07-4.62-4.62V27.81c.01-2.54,2.07-4.6,4.62-4.62h47.49c2.54.01,4.6,2.07,4.62,4.62v34.29c-.01,2.54-2.07,4.6-4.62,4.62h-20.58l-16.04,9.16c-.5.29-1.06.44-1.64.45M26.01,27.15c-.36,0-.66.29-.66.66v34.29c0,.36.3.66.66.66h6.59c1.82,0,3.3,1.48,3.3,3.3v5.83l15.21-8.7c.5-.27,1.07-.41,1.64-.42h20.76c.36,0,.66-.29.66-.66V27.81c0-.36-.3-.66-.66-.66H26.01Z"/>
       </svg>
     </a>
   </nav>
@@ -125,13 +137,16 @@
     const h = Math.floor(diff / 3600000);  diff -= h * 3600000;
     const m = Math.floor(diff / 60000);    diff -= m * 60000;
     const s = Math.floor(diff / 1000);
-    const str = `${pad(d)}:${pad(h)}:${pad(m)}:${pad(s)}`;
-    // Chaque chiffre dans une boîte de largeur fixe -> l'affichage ne bouge plus
-    el.innerHTML = [...str].map(ch =>
-      ch === ':'
-        ? '<span class="inline-block w-[.30em] text-center">:</span>'
-        : `<span class="inline-block w-[.64em] text-center">${ch}</span>`
-    ).join('');
+    const str = `${pad(d)}j${pad(h)}:${pad(m)}:${pad(s)}`;
+    // Chaque chiffre dans une boîte de largeur fixe -> l'affichage ne bouge plus.
+    // Dans chaque paire : 1er chiffre justifié à droite, 2e à gauche -> ils se resserrent.
+    let pos = 0;
+    el.innerHTML = [...str].map(ch => {
+      if (ch === ':') { pos = 0; return '<span class="inline-block w-[.30em] text-center">:</span>'; }
+      const align = pos === 0 ? 'text-right' : 'text-left';
+      pos++;
+      return `<span class="inline-block w-[.64em] ${align}">${ch}</span>`;
+    }).join('');
   }
   tick();
   setInterval(tick, 1000);

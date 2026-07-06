@@ -4,7 +4,7 @@ module.exports = {
   content: ['./index.html'],
   // Classes générées dynamiquement en JS (chiffres du compte à rebours) :
   // on les met en safelist pour garantir leur présence dans le CSS final.
-  safelist: ['inline-block', 'text-center', 'w-[.64em]', 'w-[.30em]'],
+  safelist: ['inline-block', 'text-center', 'text-right', 'text-left', 'w-[.64em]', 'w-[.30em]'],
   theme: {
     extend: {
       colors: {
