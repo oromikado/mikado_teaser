@@ -248,13 +248,13 @@
     const iframe = document.getElementById('video-iframe');
     if (!trigger || !modal || !iframe) return;
 
-    const embedBase = 'https://www.youtube.com/embed/5-tuuD2RpoA';
+    const embedBase = 'https://www.youtube.com/embed/4OmKEolnNm0';
     let open = false;
 
     function openModal(){
       if (open) return;
       open = true;
-      iframe.src = embedBase + '?autoplay=1&mute=1&controls=0&rel=0&playsinline=1&modestbranding=1';
+      iframe.src = embedBase + '?autoplay=1&controls=0&rel=0&playsinline=1&modestbranding=1';
       modal.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
       modal.classList.add('opacity-100', 'visible', 'pointer-events-auto');
       modal.setAttribute('aria-hidden', 'false');
