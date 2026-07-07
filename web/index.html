@@ -62,18 +62,15 @@
 </head>
 <body class="font-sans bg-mikado-red text-black min-h-screen overflow-x-hidden antialiased">
 
-  <!-- Contenu SEO réel mais masqué visuellement (sr-only : présent dans le DOM,
-       lu par les moteurs et lecteurs d'écran, invisible à l'écran) -->
   <h1 class="sr-only">Mikado, agence de communication et marketing digital au Luxembourg</h1>
   <p class="sr-only">Mikado, agence de communication et marketing digital au Luxembourg, fait peau neuve. Notre nouveau site arrive très bientôt&nbsp;: stay tuned.</p>
 
-  <!-- Menu haut-gauche — vecteur exact extrait de la maquette (Icon Cadenas) -->
+  <!-- Faudra encore attendre un peu pour trouver qqchose de ce côté-là. Patience :-) -->
   <button type="button" aria-label="Menu — accès privé"
           class="group fixed z-30 bg-transparent border-0 p-0 cursor-pointer leading-[0]
                  top-[clamp(26px,3.4vw,44px)] left-[clamp(26px,2.7vw,50px)]">
-    <svg viewBox="52 40 71 44" fill="#000" xmlns="http://www.w3.org/2000/svg"
+    <svg viewBox="52 40 71 50" fill="#000" xmlns="http://www.w3.org/2000/svg"
          class="block h-auto overflow-visible w-[clamp(56px,4vw,73px)]">
-      <!-- Barres : s'écartent de 4px au survol, retour ease .5s -->
       <rect x="52" y="53" width="55" height="7"
             class="[transform-box:fill-box] transition-transform duration-500 ease-[ease] motion-reduce:transition-none
                    group-hover:-translate-y-1 group-focus-visible:-translate-y-1"/>
@@ -82,7 +79,7 @@
             class="[transform-box:fill-box] transition-transform duration-500 ease-[ease] motion-reduce:transition-none
                    group-hover:translate-y-1 group-focus-visible:translate-y-1"/>
       <circle cx="107" cy="56" r="16" fill="#fff"/>
-      <!-- Cadenas : « non non » (bascule) au survol -->
+      
       <g class="[transform-box:fill-box] origin-center motion-reduce:animate-none
                 group-hover:animate-lockNo group-focus-visible:animate-lockNo">
         <path fill="#121214" transform="translate(69.303 46.928)" d="M 33.70048522949219 8.927543640136719 L 32 8.927543640136719 L 32 5.781646728515625 C 32 2.593663692474365 34.5936393737793 0 37.78164672851562 0 C 40.96965789794922 0 43.56329345703125 2.593663692474365 43.56329345703125 5.781646728515625 L 43.56329345703125 8.87086009979248 L 41.86280822753906 8.87086009979248 L 41.86280822753906 5.781646728515625 C 41.86280822753906 3.53131103515625 40.03201293945312 1.700484395027161 37.78164672851562 1.700484395027161 C 35.53128433227539 1.700484395027161 33.70048522949219 3.53131103515625 33.70048522949219 5.781646728515625 L 33.70048522949219 8.927543640136719 Z"/>
@@ -92,7 +89,7 @@
     </svg>
   </button>
 
-  <!-- Rail réseaux sociaux haut-droite — icônes SVG fournies -->
+  <!-- Effectivement, c'est de ce côté-ci qu'il se passe quelque chose... -->
   <nav aria-label="Réseaux sociaux"
        class="fixed right-0 z-30 flex flex-col gap-[clamp(8px,.7vw,12px)] top-[clamp(28px,3.2vw,46px)]
               max-[600px]:top-auto max-[600px]:bottom-0 max-[600px]:left-0 max-[600px]:flex-row max-[600px]:justify-center">
@@ -134,32 +131,29 @@
     </a>
   </nav>
 
-  <!-- Scène centrale -->
   <main class="min-h-screen flex flex-col items-center justify-center text-center
                gap-[clamp(26px,3vw,44px)] py-[14vh] px-[clamp(20px,6vw,80px)]
                max-[600px]:gap-6 max-[600px]:pt-[16vh] max-[600px]:pb-24">
 
-    <!-- Bloc logo -->
+    <!-- Tu crois vraiment que quelque chose se cache ici ? ;-) -->
     <div class="relative flex items-center justify-center bg-black w-[min(768px,72vw)] aspect-[768/240]" aria-label="MIKADO">
       <svg viewBox="0 0 768 240" fill="#fff" role="img" aria-label="MIKADO" xmlns="http://www.w3.org/2000/svg"
            class="absolute inset-0 w-full h-full block select-none">
-        <!-- Fragments retravaillés (docs/mikado-logo.svg) : pointes du M + bas du O -->
         <polygon points="74.65 79.02 74.65 58.67 92.29 77.83 74.65 79.02"/>
         <polygon points="169.95 74.27 184.32 58.67 184.32 73.55 169.95 74.27"/>
         <path d="M609.69,162.01l-5.03,5.46s36.29,27.42,73.68-8.88-68.65,3.42-68.65,3.42Z"/>
       </svg>
 
-      <!-- Petit clin d'œil pour qui retire la bande blanche via l'inspecteur ;-) -->
+      <!-- Arrête de chercher, tu ne trouveras rien ici. -->
       <p class="absolute inset-0 flex items-center justify-center text-center px-[7%] text-white
                 font-circe font-light not-italic tracking-[.02em] select-none pointer-events-none
                 text-[clamp(15px,2.3vw,32px)]">Il faudra attendre encore un peu ;-)</p>
 
-      <!-- Bande blanche diagonale — statique, déborde du cadre, ombre douce -->
+      <!-- Ben oui, ça masque le logo que tu n'as pas trouvé :-) -->
       <span class="absolute left-[-11%] top-[21%] w-[122%] h-[55.5%] bg-white origin-center
                    -rotate-[4.5deg] shadow-[0_12px_26px_rgba(0,0,0,0.35)]"></span>
     </div>
 
-    <!-- Tagline -->
     <div class="font-circe font-light not-italic text-black tracking-[.04em] flex flex-wrap justify-center
                 text-[clamp(13px,1.15vw,20px)] gap-[clamp(8px,.9vw,16px)] max-w-[90vw]">
       <span>advertising</span><span class="opacity-[.85]">|</span>
@@ -170,7 +164,7 @@
       <span>media</span>
     </div>
 
-    <!-- Compte à rebours + bouton indice vidéo (specs maquette XD) -->
+    <!-- Ce compte à rebours est ton ami : il te dit combien de temps il te reste à attendre. Allez, patience! -->
     <div class="flex flex-col items-center gap-[77px] max-[600px]:gap-10">
       <div id="countdown"
            class="font-circe font-bold not-italic text-black whitespace-nowrap leading-[.95] tracking-[.01em]
@@ -187,7 +181,7 @@
 
   </main>
 
-  <!-- Popup vidéo indice -->
+  <!-- Pour te faire patienter encore un peu ;-) -->
   <div id="video-modal"
        class="video-modal fixed inset-0 z-50 flex items-center justify-center p-[clamp(16px,4vw,48px)]
               opacity-0 invisible pointer-events-none transition-opacity duration-300 ease-out"
@@ -212,8 +206,6 @@
   </div>
 
 <script>
-  // Compte à rebours live (jours:heures:minutes:secondes)
-  // Terme : 15 juillet 2026 à 00h00, heure du Luxembourg (CEST, UTC+2).
   const target = new Date('2026-07-15T00:00:00+02:00');
 
   const el = document.getElementById('countdown');
@@ -240,8 +232,6 @@
   tick();
   setInterval(tick, 1000);
 
-  // Lien de contact anti-bots : l'adresse est encodée (base64) et le mailto
-  // n'est assemblé qu'au moment de l'interaction -> jamais en clair dans la source.
   (function(){
     const a = document.getElementById('contact-link');
     if (!a) return;
@@ -252,7 +242,6 @@
     a.addEventListener('click', reveal); // garantit le href avant la navigation
   })();
 
-  // Popup vidéo « indice video »
   (function(){
     const trigger = document.getElementById('indice-video');
     const modal = document.getElementById('video-modal');
