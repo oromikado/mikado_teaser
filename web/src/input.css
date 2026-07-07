@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Composant 4 — maquette XD : 205.39 × 41.67 px, biseau droit */
+  .indice-video-btn {
+    display: flex;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 78.54% 100%, 0 100%);
+    text-decoration: none;
+  }
+}
